@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Zero-Cital</title>
+    
+	<!--Meta Elements -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Links -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!--grid layout version-->
+    <link href="styles/homeGrid2.css" rel="stylesheet" type="text/css" />
+    <!--
+    	original flex layout
+    	<link href="styles/home.css" rel="stylesheet" type="text/css" />
+    -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <link rel="shortcut icon" href="images/walkingRobot2.ico">
+    
+    <!--Script Elements -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    
+    <script>
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+    
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+    	<a href="index.html">
+            <h1>Zero-Cital</h1>
+    	</a>
+    </header>
+    
+    <!-- Navigation -->
+	<nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+    	<ul>
+        	<li><a href="dataframe/data.html">Our Data</a>
+            	<ul>
+                	<li><a href="dataframe/data.html#dataCleaning">Data Cleaning</a></li>
+                </ul>
+            </li> 
+    		<li><a href="visualizations/visuals.html">Visualizations</a>
+            	<ul>
+                	<li><a href="visualizations/visuals.html#frequency">Frequencies</a></li>
+                    <li><a href="visualizations/visuals.html#wordcloud">WordCloud</a></li>
+                </ul>
+            </li>
+            <li><a href="machineLearning/tfidf.html">Machine Learning</a>
+            	<ul>
+                	<li><a href="machineLearning/tfidf.html">Tfidf</a></li>
+                </ul>
+            </li>
+            <li><a href="causes/causes.html">Causes of Suicide</a></li> 
+		</ul>
+    </nav>
+    
+    <!-- Opening **Subject to change-->
+    <section class="opening">
+    <div>
+        <div class="top">
+            <h2>Did You Know?</h2>
+        </div>
+        <div class="bot">
+            <div class="mySlides">
+            	<p>Suicide is the 10th leading cause of death</p>
+                <a href="causes/causes.html">Read more&raquo;</a>
+            </div>
+            <div class="mySlides">
+            	<p>sahsah</p>
+            </div>
+            <div class="mySlides">
+            	<p>something something something something</p>
+			</div>
+            <button class="displayLeft" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="displayRight" onclick="plusDivs(1)">&#10095;</button>
+  		</div> 
+    </div>
+	</section>
+    
+    <!--
+    	Main content 
+    	Previews
+    -->
+    <main>
+    	<div class="thistle op">
+            <blockquote>
+            <q>
+                Some quote.
+            </q><br>
+                <strong class="person">- dfsjkhn</strong>
+            </blockquote>
+        </div>
+        
+        <iframe src="https://www.youtube.com/embed/Hu4KcP4tp-g" allowfullscreen></iframe>
+        <aside class ="right">
+        <h3>Suicide Data</h3>
+        <p>
+            asdadsasdasd
+    	</p>
+        <p>
+        	dassadds
+        </p>
+        <a href="dataframe/data.html">Learn more about our data&raquo;</a>
+        </aside>
+        <div class="end">
+        	<ul> 
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </main>
+    
+    <!--Footer-->
+    <footer>
+    	<p class = "copyright">
+        <button onclick="window.print()">Print page</button><br>
+        <script>
+            var today = new Date();
+            document.write( "&copy;&nbsp;" );
+            document.write( today.getFullYear() );
+            document.write( "Zero-Cital" )
+        </script>
+        </p>
+    </footer>
+    
+	<script>
+		<!--script to make nav element stick to the top of the page -->
+		window.onscroll = function() {myFunction()};
+		
+		var nav_menu = document.getElementById("nav_menu");
+		var sticky = nav_menu.offsetTop;
+		
+		function myFunction() {
+			if (window.pageYOffset >= sticky) {
+				nav_menu.classList.add("sticky")
+			}
+			else {
+				nav_menu.classList.remove("sticky");
+			}
+		}
+	
+		<!--script for the .opening FACTs -->
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset Selector*/
+* { 
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+main h1, h2, h3, p {
+	padding: .25em .5em;
+}
+
+/*Header*/
+header {
+	flex-basis:100%;
+	padding:.10em .25em .3em;
+	border-bottom:2px solid #D8BFD8;
+	min-height:50px;
+}
+header h1 {
+	color: #734f96;
+	font-family:"Lato Light";
+	font-size:90%;
+	padding:1em 0 .5em;
+}
+header img {
+	max-width:35px;
+	max-height:35px;
+	padding:.5em .25em;	
+	float:left;
+}
+header a{
+	text-decoration:none;
+}
+header a h1:focus,header a h1:hover {
+	font-size:100%;
+}
+
+/* Navigation*/
+#mobile_menu {
+	display: none;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+#nav_menu {
+	background-color: #734f96;
+	box-shadow:4px 4px 4px #D8BFD8;
+	border-bottom:2px solid #D8BFD8;
+	height:auto;
+	z-index:3;
+}
+#nav_menu .active {
+	background-color: #D8BFD8;
+	color: #734f96;
+}
+#nav_menu ul {
+	display:flex;
+	text-decoration: none;
+	list-style-type: none;
+	position:relative;
+	flex-basis: 100%;
+	margin: 0;
+	padding: 0;
+	z-index:3;
+	max-width:846px;
+}
+#nav_menu ul li {
+	text-decoration: none;
+	flex-basis: 25%;
+	margin:auto;
+}
+#nav_menu ul li a {
+	display: block;
+	text-decoration: none;
+	font-family:"Lato";
+	color:white;
+	padding:.35em 0;
+	text-align:center;
+	background-color: #734f96;
+}
+#nav_menu ul ul {
+	width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+}
+#nav_menu ul li ul {
+    width: 25%;
+}
+#nav_menu ul li a:hover,a:focus {
+	background-color:#E6E6FA;
+	color:black;
+}
+
+/*section .opening*/
+.opening {
+	background-image:url(../images/pixelGaming.gif);
+	background-repeat: no-repeat;
+	height: 479px;
+	background-size:cover;
+	background-position:center;
+	padding:.25em 1em;
+	display: flex; 
+    flex-basis:100%;	
+}
+.opening h2 {
+	text-align:center;
+	font-size:270%;
+	font-family:"Lato";
+	color:white;
+	letter-spacing: 0.3em;	
+	margin:auto;
+	text-transform:uppercase;
+}
+.opening p {
+	margin:auto;
+	max-width:867px;
+	font-family:"Minion Pro";
+	font-size:160%;
+	padding: 0 2em;
+}
+.opening div {
+	margin:auto;
+	max-width:846px;
+	display:block;
+}
+.top,.bot {
+	margin:auto;
+	display:block;
+	padding:2%;
+}
+.top {
+	background-color:rgba(45.1%,31%,58.8%,.9);
+	border:3px solid rgb(45.1%,31%,58.8%);
+}
+.bot{
+	background-color:rgba(100%,100%,100%,0.9);
+	border-bottom:3px solid rgb(100%,100%,100%);
+	border-left:3px solid rgb(100%,100%,100%);
+	border-right:3px solid rgb(100%,100%,100%);
+	margin-left:auto;
+	margin-right:auto;
+	max-width:860px;
+	content:"";display:table;
+	clear:both;
+	position:relative;
+}
+.opening a{
+	font-family:"Minion Pro";
+	margin:auto;
+	padding:.1em 2.5em;
+	text-decoration:none;
+	color:#734f96;
+	font-size:120%;
+}
+.displayLeft, .displayRight{
+	transform:translate(0%,-50%);
+	position:absolute;
+	top:50%;
+	border:none;
+	display:inline-block;
+	padding:8px 16px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:black;
+	background-color:rgba(0%,0%,0%,0);
+	font-size:130%;
+}
+.displayLeft {
+	left:0%;
+}
+.displayRight {
+	right:0%;
+}
+/*Main Content*/
+main {
+	flex-basis:100%;
+}
+main h1, h2, h3 {
+	font-family:"Lato Light";
+	letter-spacing: 0.2em;
+	text-align:center;
+	padding: .2em .5em;
+}
+main blockquote {
+	font-family:"Lato Light";
+	margin:auto;
+	text-align:center;
+	max-width: 846px;
+	padding:.25em 0;
+	font-size:150%;
+}
+main img {
+	display: block;
+	margin:auto;
+	max-width:300px;
+}
+.thistle{
+	background-color:rgba(84.7%,74.9%,84.7%,.5);
+	padding:2em;
+	margin-bottom:1.5em;
+}
+.person {
+	font-size:60%;
+}
+main h1 {
+	font-size:180%;
+}
+main h2 {
+	font-size:140%;
+	color:#734f96;
+}
+main h3 {
+	font-size:120%;
+}
+main p {
+	font-size:105%;
+	font-family:"Minion Pro";
+	max-width: 846px;
+	margin:auto;
+	text-align:left;
+	padding: .2em 1em .3em;
+}
+iframe {
+	width:90%;
+	max-width:846px;
+	margin:auto;
+	padding: .2em 1em .3em;
+	min-height:464px;
+	border:none;
+	display:block;
+}
+main a{
+	font-family:"Minion Pro";
+	margin:auto;
+	max-width: 846px;
+	padding:.6em 1em;
+	text-decoration:none;
+	color:#734f96;
+	display:block;
+	font-size:120%;
+}
+/*The bot page navigation*/
+.end {
+	background-color:#EEE;
+	margin-bottom:0;
+	flex-basis:100%;
+	margin-top:2em;
+}
+.end a{
+	font-family:"Lato Light";
+	font-size:90%;
+	color:black;
+	padding:.75em;
+	margin:auto;
+}
+.end ul{
+	max-width:500px;
+	flex-basis:100%;
+	display:flex;
+	margin:auto;
+	list-style-type: none;
+}
+.end ul li{
+	width:33%;
+	text-align:center;
+}
+.end a:hover, .end a:focus{
+	color:white;
+	background-color:#666;
+	display:block;
+}
+
+/*Footer */
+footer {
+	flex-basis:100%;
+	text-align:center;
+	background-color:black;
+}
+footer p {
+	color:white;
+	padding: 1em 1.25em;
+}
+.copyright {
+	font-size:75%;
+	font-family:"Minion Pro";
+}
+
+/* Tablet -portrait view*/
+@media only screen and (max-width: 959px) {
+	header {
+		margin:0;
+	}
+	#nav_menu {
+		font-size:90%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	body {
+		font-size:98%
+	}
+	.opening h2{
+		font-size:200%;
+	}
+	#nav_menu {
+		font-size:80%;
+	}
+	iframe {
+		min-height:386px;
+	}
+}
+/* Phone -landscape view*/
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 90%;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.opening {
+		height:479px;
+	}
+	.opening h2{
+		font-size:170%;
+	}
+	main img {
+		width:50%;
+	}
+	iframe {
+		min-height:324px;
+	}
+}
+/* Phone -portrait view*/
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+	iframe {
+		min-height:228px;
+	}
+}
+/* iPhone5 -portrait view*/
+@media only screen and (max-width: 320px) {
+	body { font-size: 85%; }
+	.opening {
+		height:300px;
+	}
+}
