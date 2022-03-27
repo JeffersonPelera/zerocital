@@ -317,7 +317,7 @@ aside .right {
 	list-style-type: none;
 }
 .end ul li{
-	width:33%;
+	width:100%;
 	text-align:center;
 }
 .end a:hover, .end a:focus{
