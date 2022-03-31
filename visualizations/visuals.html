@@ -16,7 +16,7 @@
     <!--Script Elements -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../js/jquery.slicknav.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
     	$(document).ready(function(){
 			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
@@ -74,7 +74,45 @@
         </aside>
         <h2 id="frequency">Frequency</h2>
         <h3>Suicide Frequency</h3>
-        	<img src="../images/sdf.png" alt="suicide frequency graph" title="suicide frequency graph">
+        	<center><canvas id="myChart" style="max-width:800px;"></canvas></center>
+
+			<script>
+            var xValues = ["suicid", "kill", "die", "end", "anymor",
+						   "depress", "famili", "everyth", "care",
+						   "noth", "better", "keep", "job", "happi",
+						   "point", "month", "pain", "sinc", "didnt",
+						   "find", "hurt", "reason", "long", "away",
+						   "around", "hope", "week", "tire", "seem"
+						  ];
+            var yValues = [58323, 50239, 49458, 48655, 42291, 40897, 37921,
+						   37072, 36063, 35655, 35344, 30227, 28675, 27366,
+						   26982, 26766, 26557, 26198, 24975, 23957, 23819,
+						   23381, 23142, 22580, 22457, 22178, 21656, 21631,
+						   21407
+						  ];
+            var barColors = "rgba(200,0,0,1.0)";
+            
+            new Chart("myChart", {
+				type: "horizontalBar",
+				data: {
+					labels: xValues,
+				datasets: [{
+					backgroundColor: barColors,
+					data: yValues
+				}]
+				},
+				options: {
+					legend: {display: false},
+					title: {
+						display: true,
+						text: "Top 30 Stemmed Words That Indicate Suicide"
+					},
+					scales: {
+						xAxes: [{ticks: {min: 0, max:60000}}]
+					}
+				}
+            });
+            </script>
             <p>
             	asd
             </p>
