@@ -74,7 +74,7 @@
         </aside>
         <h2 id="frequency">Frequency</h2>
         <h3>Suicide Frequency</h3>
-        	<center><canvas id="myChart" style="max-width:800px;"></canvas></center>
+        	<center><canvas id="sf" style="max-width:800px;"></canvas></center>
 
 			<script>
             var xValues = ["suicid", "kill", "die", "end", "anymor",
@@ -92,7 +92,7 @@
 						  ];
             var barColors = "rgba(200,0,0,1.0)";
             
-            new Chart("myChart", {
+            new Chart("sf", {
 				type: "horizontalBar",
 				data: {
 					labels: xValues,
@@ -117,7 +117,48 @@
             	asd
             </p>
         <h3>Non-Suicide Frequency</h3>
-        	<img src="../images/nsdf.png" alt="non-suicide frequency graph" title="non-suicide frequency graph">
+        	<center><canvas id="nsf" style="max-width:800px;"></canvas></center>
+
+			<script>
+            var xValues = ["girl", "im", "need", "good", "mom",
+							"someon", "never", "also", "tell", "gt",
+							"back", "give", "way", "today", "call",
+							"hate", "game", "let", "class", "ever",
+							"everyon", "thought", "lot", "chees",
+							"sus", "alway", "new", "mean", "stop", 
+							"actual", "last"
+						  ];
+						  
+            var yValues = [14415, 14025, 13143, 12969, 11373,
+							10999, 9996, 9598, 9434, 9246, 8795,
+							7796, 7666, 7602, 7211, 7109, 7046,
+							6881, 6678, 6594, 6592, 6345, 6312,
+							6241, 6090, 5981, 5923, 5881, 5878,
+							5775, 5744
+						  ];
+            var barColors = "rgba(0,100,0,1.0)";
+            
+            new Chart("nsf", {
+				type: "horizontalBar",
+				data: {
+					labels: xValues,
+				datasets: [{
+					backgroundColor: barColors,
+					data: yValues
+				}]
+				},
+				options: {
+					legend: {display: false},
+					title: {
+						display: true,
+						text: "Top 30 Stemmed Words That Indicate Non-Suicide"
+					},
+					scales: {
+						xAxes: [{ticks: {min: 0, max:15000}}]
+					}
+				}
+            });
+            </script>
             <p>
             	asd
             </p>
