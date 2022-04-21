@@ -148,6 +148,9 @@ header a:focus,header a:hover {
 main {
 	flex-basis:100%;
 }
+main ul{
+	margin: auto;
+}
 main h1, h2, h3, h4{
 	font-family:"Lato Light";
 	letter-spacing: 0.2em;
