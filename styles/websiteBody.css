@@ -150,6 +150,9 @@ main {
 }
 main ul{
 	margin: auto;
+	max-width: 736px;
+	font-size:95%;
+	font-family:"Minion Pro";
 }
 main h1, h2, h3, h4{
 	font-family:"Lato Light";
