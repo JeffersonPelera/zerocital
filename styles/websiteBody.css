@@ -149,11 +149,16 @@ main {
 	flex-basis:100%;
 }
 main ul{
-	margin: auto;
+	margin:.5em auto;
 	max-width: 736px;
 	font-size:95%;
 	font-family:"Minion Pro";
 }
+main ul li ul {
+	max-width: 676px;
+	margin:.25em auto;
+}
+
 main h1, h2, h3, h4{
 	font-family:"Lato Light";
 	letter-spacing: 0.2em;
