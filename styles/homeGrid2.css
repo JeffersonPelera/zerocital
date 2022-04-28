@@ -38,9 +38,9 @@ header h1 {
 	padding:1em 0 .5em;
 }
 header img {
-	max-width:35px;
-	max-height:35px;
-	padding:.5em .25em;	
+	max-width: 40px;
+	max-height: 40px;
+	padding:.20em .10em;	
 	float:left;
 }
 header a{

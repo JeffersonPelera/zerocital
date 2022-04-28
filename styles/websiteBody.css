@@ -32,43 +32,9 @@ header h1 {
 header img {
 	max-width:100px;
 	margin:auto;
-	transition:8s;
-	animation: move 4.7s .2s 1 alternate;
+	padding:0.10em .0em .0em .65em;
 }
-@-webkit-keyframes move {
-	0%{margin-left: 0;}
-	48%{
-		transform: scaleX(1);
-		margin-left: 350px;
-	}
-	50%{
-		transform: scaleX(-1);
-	}
-	98%{
-		transform: scaleX(-1);
-		margin-left: 0px;
-	}
-	100%{
-		transform: scaleX(1);
-	}
-}	
-@keyframes move {
-	0%{margin-left: 0;}
-	48%{
-		transform: scaleX(1);
-		margin-left: 350px;
-	}
-	50%{
-		transform: scaleX(-1);
-	}
-	98%{
-		transform: scaleX(-1);
-		margin-left: 0px;
-	}
-	100%{
-		transform: scaleX(1);
-	}	
-}
+
 header a{
 	text-decoration:none;
 }
