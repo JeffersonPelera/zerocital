@@ -267,6 +267,14 @@ main p {
 	text-align:left;
 	padding: .2em 1em .3em;
 }
+main figcaption {
+	font-size: 105%;
+	font-family: "Minion Pro";
+	max-width: 846px;
+	margin: auto;
+	text-align: center;
+	padding: .2em 1em .3em;
+}
 .op{
 	grid-area:op;
 }
